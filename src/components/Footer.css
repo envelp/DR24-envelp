@@ -1,0 +1,29 @@
+.footer {
+  border-top: 3px solid #ECECEC;
+  padding: 30px 0px;
+  font-size: 18px;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #344050;
+  line-height: 2.3;
+}
+
+.footer span {
+  display: block;
+  margin-top: 6px;
+  color: #909499;
+}
+
+.footer-links {
+  text-align: right;
+}
+
+.footer-links a {
+  margin-left: 25px;
+}
+
+.logo-footer img {
+  width: 200px;
+}

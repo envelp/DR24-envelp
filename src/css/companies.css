@@ -1,0 +1,211 @@
+.companies-banner {
+  min-height: 90vh;
+}
+
+.companies-doctors {
+  background: #fbfcfb ;
+  border-radius: 100%;
+  position: relative;
+}
+
+.companies-doctors img {
+  display: block;
+  margin: auto;
+  border-radius: 50%;
+  border: 30px solid #fff;
+  margin-top: 146px;
+}
+
+.companies-doctors:before {
+  content: '';
+  left: -21%;
+  top: -21%;
+}
+
+
+.info {
+  padding: 100px 0px;
+}
+
+.info-section {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.info-image img {
+  display: block;
+}
+
+.clients {
+  margin-top: 90px;
+  margin-bottom: 226px;
+}
+
+.clients .clients-title {
+  margin-bottom: 55px;
+  text-align: center;
+}
+
+.clients p {
+  font-size: 18px;
+}
+
+.clients-info {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 25px 0 rgba(112, 112, 112, 0.14);
+  font-size: 20px;
+  padding: 24px 37px;
+}
+
+.clients-info p {
+  line-height: 25px;
+  margin-top: 20px;
+}
+
+.clients-info h2, h3 {
+  font-size: 20px;
+  font-weight: normal;
+  margin: 0;
+}
+
+.clients-info h2 {
+  color: #046CB8;
+  line-height: 25px;
+}
+
+.contact {
+  background: #046CB8;
+  color: #fff;
+  min-height: 372px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+.contact::after {
+  content: "";
+  width: 35%;
+  height: 100%;
+  background: #046CB8;
+  position: absolute;
+  right: -50px;
+  z-index: -99;
+}
+
+.contact::before {
+  content: "";
+  width: 35%;
+  height: 100%;
+  background: #046CB8;
+  position: absolute;
+  left: -50px;
+  z-index: -99;
+}
+
+.contact p {
+  color: #fff;
+}
+
+.form {
+  font-size: 25px;
+  padding: 20px;
+}
+
+.form input {
+  border: none;
+  padding: 19px 33px;
+  width: 100%;
+  /* display: block; */
+  margin-bottom: 20px;
+  border-radius: 50px;
+
+}
+
+.form button {
+  cursor: pointer;
+  font-size: 25px;
+  color: #046CB8;
+  background: #fff;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 50px;
+  position: relative;
+  text-align: left;
+  width: 60px;
+  height: 60px;
+}
+
+.btn-icon-button {
+  display: inline-block;
+  position: absolute;
+  color: #046CB8;
+  padding: 0px 16px;
+  border-radius: 50%;
+  line-height: 2.5;
+  right: 3px;
+  top: 0px;
+}
+
+@media screen and (min-width: 767px) {
+  .info-section {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container-info {
+    padding-top: 156px;
+    max-width: 534px;
+  }
+
+  .info-container {
+    background: #fff;
+    width: 510px;
+    min-height: 505px;
+    border-radius: 5px;
+    box-shadow: 0 0 25px 0 rgba(112, 112, 112, 0.14);
+    padding: 66px;
+  }
+
+  .companies-doctors {
+    position: absolute;
+    background:#f8f7f8 ;
+    top: 0;
+    width: 876px;
+    height: 876px;
+    z-index: -1;
+  }
+
+  .info-image img {
+    display: block;
+    margin-left: -155px;
+    margin-top: -115px;
+  }
+
+  .clients-info {
+    width: 337px;
+    height: 201px;
+    float: right;
+  }
+  .form {
+    padding: 0;
+  }
+
+  .form input {
+    width: 283px;
+    margin-right: 20px;
+  }
+
+  .contact::before {
+    left: -400px;
+  }
+
+  .contact::after {
+    right: -400px;
+  }
+
+}

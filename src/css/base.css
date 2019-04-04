@@ -1,0 +1,75 @@
+h1 {
+  font-size: 50px;
+  font-weight: 400;
+  line-height: 60px;
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: 400;
+  /* line-height: 35px; */
+  line-height: 60px;
+}
+
+p {
+  color: #a5a9ac;
+  font-size: 22px;
+  line-height: 35px;
+}
+
+.btn {
+  color: #046CB8;
+  width: 170px;
+}
+
+.btn-small {
+  width: 90px;
+  font-size: 18px;
+}
+
+.btn-background {
+  color: #fff;
+  background: #046CB8;
+  padding: 12px 30px;
+  width: 197px;
+  height: 51px;
+  font-size: 18px;
+}
+
+.btn-background,
+.btn {
+  display: block;
+  text-decoration: none;
+  border-radius: 30px;
+  position: relative;
+  text-align: left;
+  cursor: pointer;
+}
+
+.btn-icon {
+  float: right;
+  margin-top: 2px;
+}
+
+.btn-icon-background{
+  display: inline-block;
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  background: #fff;
+  color: #046CB8;
+  padding: 0px 16px;
+  border-radius: 50%;
+  line-height: 2.5;
+  right: 3px;
+  top: 3px;
+
+}
+
+.margin-top {
+  margin-top: 50px;
+}
+
+*:focus {
+    outline: none;
+}
