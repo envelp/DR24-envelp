@@ -4,90 +4,92 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 
-import '../css/companies.css';
+import '../css/works.css';
 
 export const WorksPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content
 
   return (
     <div>
-      <section className='companies-banner'>
-        <div className='row'>
-          <div className='col-sm-6 col-xs-12'>
-            <div className="container-info">
-              <h1>Para empresas</h1>
-              <p>
-                Somos el primer servicio tele-medicina en el país ofreciendo el mejor servicio para las empresas.
-                Somos el primer servicio tele-medicina en el país ofreciendo el mejor servicio para las empresas.
-                Somos el primer servicio tele-medicina en el país ofreciendo el mejor servicio para las empresas.
-              </p>
-            </div>
+      <section className="works-s">
+        <div className="row works-s-section">
+          <div className="col-sm-6 col-xs-12">
+            <h1>¿Qué es telemedicina?</h1>
+            <p>
+              Somos un Proveedor de Servicios de Salud (PSS) dedicados a proveer atención médica por video,
+              chat o  telefónica  especializada de primer contacto información médica las 24 horas de los 365 días del año.
+          </p>
           </div>
-          <div className='col-sm-6 col-xs-12 companies-banner-image'>
-            <div className="companies-doctors">
-              {/* <img src={doctors} alt="Doctors" /> */}
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className="info">
-        <div className="row info-section">
-          <div className="col-sm-6 col-xs-12 info-image">
+          <div className="col-sm-6 col-xs-12 works-s-image">
             {/* <img src={display} alt="display" /> */}
           </div>
-          <div className="col-sm-6 col-xs-12">
-            <div className="info-container">
-              <h2>Especialistas sin <br /> salir de la oficina</h2>
-              <p>
-                No siempre es fácil llevar a un niño o una persona mayor a un centro de salud.
-                Gracias  a las consultas a domicilio puedes esperar comodamente desde tu casa y recibir una evaluación.
-              </p>
-            </div>
-          </div>
         </div>
       </section>
-      <section className="clients">
-        <h2 className="clients-title">Lo que dicen nuestros clientes</h2>
-        <div className="row">
-          <div className="col-sm-4">
-            <div className="clients-item">
-              <div className="clients-image">
-                {/* <Companies /> */}
-              </div>
-              <div className="clients-info">
-                <h2>Andres Bustamante</h2>
-                <h3>Director General de XXX</h3>
+      <section className="questions">
+        <h2>Preguntas frecuentes</h2>
+        <div className="questions-container">
+          <div className="row">
+            <div className="question-item col-sm-7">
+              <div className="question-title"><h3>How is telemedicine delivered?</h3></div>
+              <div className="question-body">
                 <p>
-                  "Deseo brindar a cada uno de mis pacientesla atención y el tiempo que merecen."
-                </p>
+                  Telemedicine can be delivered using video-conferencing, audio communication, and/or
+                  text-messaging using mobile phones, tablets, and desktop computers.
+              </p>
               </div>
             </div>
-          </div>
-          <div className="col-sm-4">
-            <div className="clients-item">
-              <div className="clients-image">
-                {/* <Pharmacies /> */}
-              </div>
-              <div className="clients-info">
-                <h2>Dra. María Salazar</h2>
-                <h3>Médico General</h3>
+            <div className="question-item col-sm-7">
+              <div className="question-title"><h3>Who participates in telemedicine?</h3></div>
+              <div className="question-body">
                 <p>
-                  "Deseo brindar a cada uno de mis pacientesla atención y el tiempo que merecen."
-                </p>
+                  Telemedicine can be delivered using video-conferencing, audio communication, and/or
+                  text-messaging using mobile phones, tablets, and desktop computers.
+              </p>
               </div>
             </div>
-          </div>
-          <div className="col-sm-4">
-            <div className="clients-item">
-              <div className="clients-image">
-                {/* <Pharmacies /> */}
-              </div>
-              <div className="clients-info">
-                <h2>Dra. Ricardo Garza</h2>
-                <h3>Médico General</h3>
+            <div className="question-item col-sm-7">
+              <div className="question-title"><h3>What can telemedicine be used for?</h3></div>
+              <div className="question-body">
                 <p>
-                  "Deseo brindar a cada uno de mis pacientesla atención y el tiempo que merecen."
-                </p>
+                  Telemedicine can be delivered using video-conferencing, audio communication, and/or
+                  text-messaging using mobile phones, tablets, and desktop computers.
+              </p>
+              </div>
+            </div>
+            <div className="question-item col-sm-7">
+              <div className="question-title"><h3>Where can telemedicine be provided?</h3></div>
+              <div className="question-body">
+                <p>
+                  Telemedicine can be delivered using video-conferencing, audio communication, and/or
+                  text-messaging using mobile phones, tablets, and desktop computers.
+              </p>
+              </div>
+            </div>
+            <div className="question-item col-sm-7">
+              <div className="question-title"><h3>How does telemedicine increase access to care?</h3></div>
+              <div className="question-body">
+                <p>
+                  Telemedicine can be delivered using video-conferencing, audio communication, and/or
+                  text-messaging using mobile phones, tablets, and desktop computers.
+              </p>
+              </div>
+            </div>
+            <div className="question-item col-sm-7">
+              <div className="question-title"><h3>How does telemedicine  improves quality of care delivery?</h3></div>
+              <div className="question-body">
+                <p>
+                  Telemedicine can be delivered using video-conferencing, audio communication, and/or
+                  text-messaging using mobile phones, tablets, and desktop computers.
+              </p>
+              </div>
+            </div>
+            <div className="question-item col-sm-7">
+              <div className="question-title"><h3>How does telemedicine  improves quality of care delivery?</h3></div>
+              <div className="question-body">
+                <p>
+                  Telemedicine can be delivered using video-conferencing, audio communication, and/or
+                  text-messaging using mobile phones, tablets, and desktop computers.
+              </p>
               </div>
             </div>
           </div>

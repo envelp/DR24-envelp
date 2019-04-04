@@ -4,27 +4,28 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 
-import '../css/companies.css';
+import '../css/pharmacies.css';
 
 export const PharmaciesPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content
 
   return (
     <div>
-      <section className='companies-banner'>
+      <section className='pharmacies-banner'>
         <div className='row'>
           <div className='col-sm-6 col-xs-12'>
             <div className="container-info">
-              <h1>Para empresas</h1>
+              <h1>Para farmacias</h1>
               <p>
-                Somos el primer servicio tele-medicina en el país ofreciendo el mejor servicio para las empresas.
-                Somos el primer servicio tele-medicina en el país ofreciendo el mejor servicio para las empresas.
-                Somos el primer servicio tele-medicina en el país ofreciendo el mejor servicio para las empresas.
-              </p>
+                Somos el primer servicio de tele-medicina en el país ofreciendo el mejor servicio.
+                Agenda una cita ya!Somos el primer servicio de tele-medicina en el país ofreciendo el mejor servicio.
+                Agenda una cita ya!Somos el primer servicio de tele-medicina en el país ofreciendo el mejor servicio.
+                Agenda una cita ya!
+            </p>
             </div>
           </div>
-          <div className='col-sm-6 col-xs-12 companies-banner-image'>
-            <div className="companies-doctors">
+          <div className='col-sm-6 col-xs-12 pharmacies-banner-image'>
+            <div className="pharmacies-doctors">
               {/* <img src={doctors} alt="Doctors" /> */}
             </div>
           </div>
@@ -37,59 +38,30 @@ export const PharmaciesPageTemplate = ({ title, content, contentComponent }) => 
           </div>
           <div className="col-sm-6 col-xs-12">
             <div className="info-container">
-              <h2>Especialistas sin <br /> salir de la oficina</h2>
+              <h2>Médico sin salir de casa</h2>
               <p>
                 No siempre es fácil llevar a un niño o una persona mayor a un centro de salud.
-                Gracias  a las consultas a domicilio puedes esperar comodamente desde tu casa y recibir una evaluación.
-              </p>
+                Gracias a las consultas a domicilio puedes esperar comodamente desde tu casa y recibir una evaluación,
+                diagnostico o tratamiento que requieran un examen físico.
+            </p>
             </div>
           </div>
         </div>
       </section>
       <section className="clients">
-        <h2 className="clients-title">Lo que dicen nuestros clientes</h2>
+        <h2 className="clients-title">Farmacias que ya trabajan con nosotros</h2>
         <div className="row">
-          <div className="col-sm-4">
-            <div className="clients-item">
-              <div className="clients-image">
-                {/* <Companies /> */}
-              </div>
-              <div className="clients-info">
-                <h2>Andres Bustamante</h2>
-                <h3>Director General de XXX</h3>
-                <p>
-                  "Deseo brindar a cada uno de mis pacientesla atención y el tiempo que merecen."
-                </p>
-              </div>
-            </div>
+          <div className="col-sm-3">
+            {/* <Companies /> */}
           </div>
-          <div className="col-sm-4">
-            <div className="clients-item">
-              <div className="clients-image">
-                {/* <Pharmacies /> */}
-              </div>
-              <div className="clients-info">
-                <h2>Dra. María Salazar</h2>
-                <h3>Médico General</h3>
-                <p>
-                  "Deseo brindar a cada uno de mis pacientesla atención y el tiempo que merecen."
-                </p>
-              </div>
-            </div>
+          <div className="col-sm-3">
+            {/* <Companies /> */}
           </div>
-          <div className="col-sm-4">
-            <div className="clients-item">
-              <div className="clients-image">
-                {/* <Pharmacies /> */}
-              </div>
-              <div className="clients-info">
-                <h2>Dra. Ricardo Garza</h2>
-                <h3>Médico General</h3>
-                <p>
-                  "Deseo brindar a cada uno de mis pacientesla atención y el tiempo que merecen."
-                </p>
-              </div>
-            </div>
+          <div className="col-sm-3">
+            {/* <Companies /> */}
+          </div>
+          <div className="col-sm-3">
+            {/* <Companies /> */}
           </div>
         </div>
       </section>
