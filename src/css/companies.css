@@ -188,7 +188,7 @@
 
   .clients-info {
     width: 337px;
-    height: 201px;
+    min-height: 201px;
     float: right;
   }
   .form {

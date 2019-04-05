@@ -129,7 +129,7 @@ export const companiesPageQuery = graphql`
         }
         imageSecond {
           childImageSharp {
-            fluid(maxWidth: 100, quality: 100) {
+            fluid(maxWidth: 400, quality: 100) {
               ...GatsbyImageSharpFluid
             }
           }
