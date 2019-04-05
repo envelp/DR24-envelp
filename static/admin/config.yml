@@ -57,7 +57,7 @@ collections:
           - {label: Full_image, name: full_image, widget: image}
           - {label: Pricing, name: pricing, widget: object, fields: [{label: Heading, name: heading, widget: string}, {label: Description, name: description, widget: string}, {label: Plans, name: plans, widget: list, fields: [{label: Plan, name: plan, widget: string}, {label: Price, name: price, widget: string}, {label: Description, name: description, widget: string}, {label: Items, name: items, widget: list}]}]}
       - file: "src/pages/companies/index.md"
-        label: "For companies"
+        label: "For Companies"
         name: "companies"
         fields:
           - {label: Title, name: title, widget: string}
@@ -66,4 +66,31 @@ collections:
           - {label: "Image second section", name: "secondImage", widget: image}
           - {label: "Title second section", name: "titleSecondSection", widget: string}
           - {label: Blurbs, name: blurbs, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Title, name: title, widget: text}, {label: Description, name: description, widget: string}]}
-
+      - file: "src/pages/pharmacies/index.md"
+        label: "For Pharmacies"
+        name: "pharmacies"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Information, name: information, widget: string}
+          - {label: "Image banner", name: "imageBanner", widget: image}
+          - {label: "Image second section", name: "secondImage", widget: image}
+          - {label: "Title second section", name: "titleSecondSection", widget: string}
+          - {label: Pharmacies, name: pharmacies, widget: list, fields: [{label: Image, name: image, widget: image}]}
+      - file: "src/pages/individuals/index.md"
+        label: "For Individuals"
+        name: "Individuals"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Information, name: information, widget: string}
+          - {label: "Image banner", name: "imageBanner", widget: image}
+          - {label: "Image second section", name: "secondImage", widget: image}
+          - {label: "Title second section", name: "titleSecondSection", widget: string}
+          - {label: Specialists, name: specialists, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Name, name: name, widget: text}, {label: Title, name: title, widget: string}, {label: Description, name: description, widget: string}]}
+      - file: "src/pages/works/index.md"
+        label: "How it works"
+        name: "How it works"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Information, name: information, widget: string}
+          - {label: "Image banner", name: "imageBanner", widget: image}
+          - {label: Questions, name: questions, widget: list, fields: [{label: Question, name: question, widget: string}, {label: Answer, name: answer, widget: text}]}
