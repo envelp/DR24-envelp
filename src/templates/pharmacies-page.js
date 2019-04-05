@@ -80,6 +80,12 @@ export const PharmaciesPageTemplate = ({
   )
 }
 
+PharmaciesPageTemplate.propTypes = {
+  title: PropTypes.string.isRequired,
+  content: PropTypes.string,
+  contentComponent: PropTypes.func,
+}
+
 const PharmaciesPage = ({ data }) => {
   const { frontmatter } = data
 
