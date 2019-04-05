@@ -87,7 +87,7 @@ PharmaciesPageTemplate.propTypes = {
 }
 
 const PharmaciesPage = ({ data }) => {
-  const { frontmatter } = data
+  const { frontmatter } = data.markdownRemark
 
   return (
     <Layout>
