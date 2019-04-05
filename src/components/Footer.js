@@ -1,14 +1,15 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import logo from '../img/logo.svg'
+// import logo from '../img/logo.svg'
+import logo from "../../static/img/logo.png"
 import '../css/flexboxgrid.min.css';
 import './Footer.css';
 
 const Footer = class extends React.Component {
   render() {
     return (
-      <footer className="footer">
+      <footer className="footer container">
         <div className="row between-lg" style={{ textAlign: 'center' }}>
           <div className="col-sm-6">
             <div className="row">

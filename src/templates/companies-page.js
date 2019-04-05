@@ -4,13 +4,18 @@ import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 
+import doctors from '../../static/img/doctors.png'
+import display from '../../static/img/img.png'
+import companies from '../../static/img/para-empresas.png'
+import pharmacies from '../../static/img/para-farmacias.png'
+
 import '../css/companies.css';
 
 export const CompaniesPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content
 
   return (
-    <div>
+    <div className="container">
       <section className='companies-banner'>
         <div className='row'>
           <div className='col-sm-6 col-xs-12'>
@@ -25,7 +30,7 @@ export const CompaniesPageTemplate = ({ title, content, contentComponent }) => {
           </div>
           <div className='col-sm-6 col-xs-12 companies-banner-image'>
             <div className="companies-doctors">
-              {/* <img src={doctors} alt="Doctors" /> */}
+              <img src={doctors} alt="Doctors" />
             </div>
           </div>
         </div>
@@ -33,7 +38,7 @@ export const CompaniesPageTemplate = ({ title, content, contentComponent }) => {
       <section className="info">
         <div className="row info-section">
           <div className="col-sm-6 col-xs-12 info-image">
-            {/* <img src={display} alt="display" /> */}
+            <img src={display} alt="display" />
           </div>
           <div className="col-sm-6 col-xs-12">
             <div className="info-container">
@@ -52,7 +57,7 @@ export const CompaniesPageTemplate = ({ title, content, contentComponent }) => {
           <div className="col-sm-4">
             <div className="clients-item">
               <div className="clients-image">
-                {/* <Companies /> */}
+                <img src={companies} alt="companies" />
               </div>
               <div className="clients-info">
                 <h2>Andres Bustamante</h2>
@@ -66,7 +71,7 @@ export const CompaniesPageTemplate = ({ title, content, contentComponent }) => {
           <div className="col-sm-4">
             <div className="clients-item">
               <div className="clients-image">
-                {/* <Pharmacies /> */}
+                <img src={pharmacies} alt="pharmacies" />
               </div>
               <div className="clients-info">
                 <h2>Dra. María Salazar</h2>
@@ -80,7 +85,7 @@ export const CompaniesPageTemplate = ({ title, content, contentComponent }) => {
           <div className="col-sm-4">
             <div className="clients-item">
               <div className="clients-image">
-                {/* <Pharmacies /> */}
+                <img src={companies} alt="companies" />
               </div>
               <div className="clients-info">
                 <h2>Dra. Ricardo Garza</h2>

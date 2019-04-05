@@ -10,7 +10,7 @@ export const WorksPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content
 
   return (
-    <div>
+    <div className="container">
       <section className="works-s">
         <div className="row works-s-section">
           <div className="col-sm-6 col-xs-12">

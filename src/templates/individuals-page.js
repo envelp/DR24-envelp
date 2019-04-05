@@ -11,7 +11,7 @@ export const IndividualsPageTemplate = ({ title, content, contentComponent }) =>
   const PageContent = contentComponent || Content
 
   return (
-    <div>
+    <div className="container">
       <section className='individuals-banner'>
         <div className='row'>
           <div className='col-sm-6 col-xs-12'>
