@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 import Features from '../components/Features'
@@ -124,11 +124,11 @@ export const IndexPageTemplate = ({
         <div className='row'>
           <div className='col-sm-6 col-xs-12'>
             <div className="container-info">
-              <h1>Ofrecemos el primer y único servicio de <br /> tele-medicina en México</h1>
+              <h1>{title}</h1>
               <p>
                 Somos el primer servicio tele-medicina en el país ofreciendo el mejor servicio. Agenda
                 una cita ya!.
-            </p>
+              </p>
               {/* <a className='btn-background margin-top' href="/">Conócenos <span className="btn-icon-background"><FontAwesomeIcon icon="arrow-right" /></span></a> */}
               <a className='btn-background margin-top' href="/">Conócenos <span className="btn-icon-background"></span></a>
             </div>

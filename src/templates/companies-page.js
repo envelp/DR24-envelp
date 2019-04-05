@@ -2,6 +2,8 @@ import React from "react"
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
+import Clients from '../components/Clients'
 
 import doctors from '../../static/img/doctors.png'
 import display from '../../static/img/img.png'
@@ -19,25 +21,21 @@ export const CompaniesPageTemplate = ({
   description,
   clients
 }) => {
-  // const PageContent = contentComponent || Content
-
   return (
     <div className="container">
       <section className='companies-banner'>
         <div className='row'>
           <div className='col-sm-6 col-xs-12'>
             <div className="container-info">
-              <h1>Para empresas</h1>
+              <h1>{title}</h1>
               <p>
-                Somos el primer servicio tele-medicina en el país ofreciendo el mejor servicio para las empresas.
-                Somos el primer servicio tele-medicina en el país ofreciendo el mejor servicio para las empresas.
-                Somos el primer servicio tele-medicina en el país ofreciendo el mejor servicio para las empresas.
+                {information}
               </p>
             </div>
           </div>
           <div className='col-sm-6 col-xs-12 companies-banner-image'>
             <div className="companies-doctors">
-              <img src={doctors} alt="Doctors" />
+              <PreviewCompatibleImage imageInfo={imageBanner} />
             </div>
           </div>
         </div>
@@ -45,14 +43,13 @@ export const CompaniesPageTemplate = ({
       <section className="info">
         <div className="row info-section">
           <div className="col-sm-6 col-xs-12 info-image">
-            <img src={display} alt="display" />
+            <PreviewCompatibleImage imageInfo={imageSecond} />
           </div>
           <div className="col-sm-6 col-xs-12">
             <div className="info-container">
-              <h2>Especialistas sin <br /> salir de la oficina</h2>
+              <h2>{titleSecondSection}</h2>
               <p>
-                No siempre es fácil llevar a un niño o una persona mayor a un centro de salud.
-                Gracias  a las consultas a domicilio puedes esperar comodamente desde tu casa y recibir una evaluación.
+                {description}
               </p>
             </div>
           </div>
@@ -60,50 +57,7 @@ export const CompaniesPageTemplate = ({
       </section>
       <section className="clients">
         <h2 className="clients-title">Lo que dicen nuestros clientes</h2>
-        <div className="row">
-          <div className="col-sm-4">
-            <div className="clients-item">
-              <div className="clients-image">
-                <img src={companies} alt="companies" />
-              </div>
-              <div className="clients-info">
-                <h2>Andres Bustamante</h2>
-                <h3>Director General de XXX</h3>
-                <p>
-                  "Deseo brindar a cada uno de mis pacientesla atención y el tiempo que merecen."
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="col-sm-4">
-            <div className="clients-item">
-              <div className="clients-image">
-                <img src={pharmacies} alt="pharmacies" />
-              </div>
-              <div className="clients-info">
-                <h2>Dra. María Salazar</h2>
-                <h3>Médico General</h3>
-                <p>
-                  "Deseo brindar a cada uno de mis pacientesla atención y el tiempo que merecen."
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="col-sm-4">
-            <div className="clients-item">
-              <div className="clients-image">
-                <img src={companies} alt="companies" />
-              </div>
-              <div className="clients-info">
-                <h2>Dra. Ricardo Garza</h2>
-                <h3>Médico General</h3>
-                <p>
-                  "Deseo brindar a cada uno de mis pacientesla atención y el tiempo que merecen."
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <Clients gridItems={clients} />
       </section>
       <section className="contact">
         <div className="row">
@@ -125,7 +79,6 @@ export const CompaniesPageTemplate = ({
 
 CompaniesPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
-  // information: PropTypes.string,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
 }
@@ -168,7 +121,7 @@ export const companiesPageQuery = graphql`
           alt
           image {
             childImageSharp {
-              fluid(maxWidth: 100, quality: 100) {
+              fluid(maxWidth: 800, quality: 100) {
                 ...GatsbyImageSharpFluid
               }
             }

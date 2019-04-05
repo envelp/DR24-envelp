@@ -734,3 +734,10 @@ pre tt:after {
     font-size: 100%;
   }
 }
+
+
+.gatsby-image-wrapper {
+  overflow: inherit !important;
+  max-width: 560px !important;
+  margin: auto;
+}
