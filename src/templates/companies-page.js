@@ -2,7 +2,6 @@ import React from "react"
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import Content, { HTMLContent } from '../components/Content'
 
 import doctors from '../../static/img/doctors.png'
 import display from '../../static/img/img.png'
@@ -11,8 +10,16 @@ import pharmacies from '../../static/img/para-farmacias.png'
 
 import '../css/companies.css';
 
-export const CompaniesPageTemplate = ({ title, content, contentComponent }) => {
-  const PageContent = contentComponent || Content
+export const CompaniesPageTemplate = ({
+  title,
+  information,
+  imageBanner,
+  imageSecond,
+  titleSecondSection,
+  description,
+  clients
+}) => {
+  // const PageContent = contentComponent || Content
 
   return (
     <div className="container">
@@ -118,55 +125,68 @@ export const CompaniesPageTemplate = ({ title, content, contentComponent }) => {
 
 CompaniesPageTemplate.propTypes = {
   title: PropTypes.string.isRequired,
+  // information: PropTypes.string,
   content: PropTypes.string,
   contentComponent: PropTypes.func,
 }
 
 const CompaniesPage = ({ data }) => {
-  const { markdownRemark: post } = data
+  const { frontmatter } = data.markdownRemark
 
   return (
     <Layout>
       <CompaniesPageTemplate
-        contentComponent={HTMLContent}
-        title={post.frontmatter.title}
-        content={post.html}
+        title={frontmatter.title}
+        information={frontmatter.information}
+        imageBanner={frontmatter.imageBanner}
+        imageSecond={frontmatter.imageSecond}
+        titleSecondSection={frontmatter.titleSecondSection}
+        description={frontmatter.description}
+        clients={frontmatter.clients}
       />
     </Layout>
   )
 }
 
 CompaniesPage.propTypes = {
-  data: PropTypes.object.isRequired,
+  data: PropTypes.shape({
+    markdownReamark: PropTypes.shape({
+      frontmatter: PropTypes.object,
+    }),
+  }),
 }
 
 export default CompaniesPage
 
 export const companiesPageQuery = graphql`
   query CompaniesPageTemplate {
-    markdownRemark(forntmatter: { templateKey: {eq: "companies-page"}}) {
+    markdownRemark(frontmatter: { templateKey: {eq: "companies-page"}}) {
       frontmatter {
         title
         information
         imageBanner {
+          alt
+          image {
+            childImageSharp {
+              fluid(maxWidth: 100, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+        imageSecond {
           childImageSharp {
-            fluid (maxWidth: 200, quality: 100) {
+            fluid(maxWidth: 100, quality: 100) {
               ...GatsbyImageSharpFluid
             }
           }
         }
-        secondImage {
-          childImageSharp {
-            fluid (maxWidth: 200, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
+        titleSecondSection
         description
         clients {
           image {
             childImageSharp {
-              fluid (maxWidth: 200, quality: 100) {
+              fluid(maxWidth: 200, quality: 100) {
                 ...GatsbyImageSharpFluid
               }
             }

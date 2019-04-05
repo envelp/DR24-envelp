@@ -1,11 +1,20 @@
 ---
-title: Para Empresas
-information: esto es un ejemplo
-imageBanner: /img/doctors.png
-secondImage: /img/img.png
-titleSecondSection: segundo titulo
-blurbs:
-  - description: esto es un ejemplo
-    image: /img/para-empresas.png
-    title: para las empresas
+templateKey: companies-page
+title: Hola desde el nuevo contenido
+information: Esto es la informacion
+imageBanner:
+  image: /img/doctors.png
+  alt: Doctors
+imageSecond: /img/doctors.png
+titleSecondSection: Titulo de la segunda seccion
+description: Esto es la descrpicion
+clients:
+  - image: /img/para-empresas.png
+    name: >
+      esto es otro ejemplo de text
+    title: >
+      el titulo
+    description: >
+      Esto es la description
 ---
+

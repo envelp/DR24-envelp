@@ -6,6 +6,7 @@ import Layout from '../components/Layout'
 import Features from '../components/Features'
 import BlogRoll from '../components/BlogRoll'
 
+import '../css/base.css';
 import '../css/home.css';
 import doctors from '../../static/img/doctors.png'
 import display from '../../static/img/img.png'
