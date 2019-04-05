@@ -5,11 +5,6 @@ import Layout from '../components/Layout'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 import Clients from '../components/Clients'
 
-import doctors from '../../static/img/doctors.png'
-import display from '../../static/img/img.png'
-import companies from '../../static/img/para-empresas.png'
-import pharmacies from '../../static/img/para-farmacias.png'
-
 import '../css/companies.css';
 
 export const CompaniesPageTemplate = ({

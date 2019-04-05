@@ -72,9 +72,10 @@ collections:
         label: "For Pharmacies"
         name: "pharmacies"
         fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "pharmacies-page"}
           - {label: Title, name: title, widget: string}
           - {label: Information, name: information, widget: string}
-          - {label: "Image banner", name: "imageBanner", widget: image}
+          - {label: "Image Banner", name: "imageBanner", widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}
           - {label: "Image second section", name: "secondImage", widget: image}
           - {label: "Title second section", name: "titleSecondSection", widget: string}
           - {label: Description, name: description, widget: string}

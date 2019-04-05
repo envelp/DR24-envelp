@@ -2,31 +2,32 @@ import React from "react"
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import Content, { HTMLContent } from '../components/Content'
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 import '../css/pharmacies.css';
 
-export const PharmaciesPageTemplate = ({ title, content, contentComponent }) => {
-  const PageContent = contentComponent || Content
-
+export const PharmaciesPageTemplate = ({
+  title,
+  information,
+  imageBanner,
+  imageSecond,
+  titleSecondSection,
+  description,
+  pharmacies
+}) => {
   return (
     <div className="container">
       <section className='pharmacies-banner'>
         <div className='row'>
           <div className='col-sm-6 col-xs-12'>
             <div className="container-info">
-              <h1>Para farmacias</h1>
-              <p>
-                Somos el primer servicio de tele-medicina en el país ofreciendo el mejor servicio.
-                Agenda una cita ya!Somos el primer servicio de tele-medicina en el país ofreciendo el mejor servicio.
-                Agenda una cita ya!Somos el primer servicio de tele-medicina en el país ofreciendo el mejor servicio.
-                Agenda una cita ya!
-            </p>
+              <h1>{title}</h1>
+              <p>{information}</p>
             </div>
           </div>
           <div className='col-sm-6 col-xs-12 pharmacies-banner-image'>
             <div className="pharmacies-doctors">
-              {/* <img src={doctors} alt="Doctors" /> */}
+              <PreviewCompatibleImage imageInfo={imageBanner} />
             </div>
           </div>
         </div>
@@ -34,16 +35,12 @@ export const PharmaciesPageTemplate = ({ title, content, contentComponent }) => 
       <section className="info">
         <div className="row info-section">
           <div className="col-sm-6 col-xs-12 info-image">
-            {/* <img src={display} alt="display" /> */}
+            <PreviewCompatibleImage imageInfo={imageSecond} />
           </div>
           <div className="col-sm-6 col-xs-12">
             <div className="info-container">
-              <h2>Médico sin salir de casa</h2>
-              <p>
-                No siempre es fácil llevar a un niño o una persona mayor a un centro de salud.
-                Gracias a las consultas a domicilio puedes esperar comodamente desde tu casa y recibir una evaluación,
-                diagnostico o tratamiento que requieran un examen físico.
-            </p>
+              <h2>{titleSecondSection}</h2>
+              <p>{description}</p>
             </div>
           </div>
         </div>
@@ -83,38 +80,68 @@ export const PharmaciesPageTemplate = ({ title, content, contentComponent }) => 
   )
 }
 
-PharmaciesPageTemplate.propTypes = {
-  title: PropTypes.string.isRequired,
-  content: PropTypes.string,
-  contentComponent: PropTypes.func,
-}
-
 const PharmaciesPage = ({ data }) => {
-  const { markdownRemark: post } = data
+  const { frontmatter } = data
 
   return (
     <Layout>
       <PharmaciesPageTemplate
-        contentComponent={HTMLContent}
-        title={post.frontmatter.title}
-        content={post.html}
+        title={frontmatter.title}
+        information={frontmatter.information}
+        imageBanner={frontmatter.imageBanner}
+        imageSecond={frontmatter.imageSecond}
+        titleSecondSection={frontmatter.titleSecondSection}
+        description={frontmatter.description}
+        pharmacies={frontmatter.pharmacies}
       />
     </Layout>
   )
 }
 
 PharmaciesPage.propTypes = {
-  data: PropTypes.object.isRequired,
+  data: PropTypes.shape({
+    markdownReamark: PropTypes.shape({
+      frontmatter: PropTypes.object,
+    }),
+  }),
 }
 
 export default PharmaciesPage
 
 export const pharmaciesPageQuery = graphql`
-  query PharmaciesPageTemplate($id: String!) {
-    markdownRemark(id: { eq: $id }) {
-      html
+  query PharmaciesPageTemplate {
+    markdownRemark(frontmatter: { templateKey: {eq: "companies-page"}}) {
       frontmatter {
         title
+        information
+        imageBanner {
+          alt
+          image {
+            childImageSharp {
+              fluid(maxWidth: 800, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+        imageSecond {
+          childImageSharp {
+            fluid(maxWidth: 400, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        titleSecondSection
+        description
+        pharmacies {
+          image {
+            childImageSharp {
+              fluid(maxWidth: 200, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
       }
     }
   }
