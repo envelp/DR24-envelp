@@ -1,4 +1,5 @@
 ---
+templateKey: 'companies-page'
 title: Ofrecemos el primer  y único servicio de  tele-medicina en México
 information: >-
   Somos el primer servicio de tele-medicina en el país ofreciendo el mejor
