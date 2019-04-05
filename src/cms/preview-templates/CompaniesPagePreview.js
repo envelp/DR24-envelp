@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { CompaniesPageTemplate } from '../../templates/about-page'
+import { CompaniesPageTemplate } from '../../templates/companies-page'
 
 const CompaniesPagePreview = ({ entry, widgetFor }) => (
   <CompaniesPageTemplate
