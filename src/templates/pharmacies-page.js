@@ -13,7 +13,7 @@ export const PharmaciesPageTemplate = ({
   imageSecond,
   titleSecondSection,
   description,
-  pharmacies
+  // pharmacies
 }) => {
   return (
     <div className="container">
@@ -139,15 +139,6 @@ export const pharmaciesPageQuery = graphql`
         }
         titleSecondSection
         description
-        pharmacies {
-          image {
-            childImageSharp {
-              fluid(maxWidth: 200, quality: 100) {
-                ...GatsbyImageSharpFluid
-              }
-            }
-          }
-        }
       }
     }
   }
