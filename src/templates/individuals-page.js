@@ -141,7 +141,7 @@ IndividualsPage.propTypes = {
 export default IndividualsPage
 
 export const individualsPageQuery = graphql`
-  query IndividualsPage($id: String!) {
+  query IndividualsPageTemplate($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {

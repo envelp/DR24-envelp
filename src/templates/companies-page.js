@@ -143,11 +143,38 @@ CompaniesPage.propTypes = {
 export default CompaniesPage
 
 export const companiesPageQuery = graphql`
-  query CompaniesPage($id: String!) {
-    markdownRemark(id: { eq: $id }) {
-      html
+  query CompaniesPageTemplate {
+    markdownRemark(forntmatter: { templateKey: {eq: "companies-page"}}) {
       frontmatter {
         title
+        information
+        imageBanner {
+          childImageSharp {
+            fluid (maxWidth: 200, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        secondImage {
+          childImageSharp {
+            fluid (maxWidth: 200, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        description
+        clients {
+          image {
+            childImageSharp {
+              fluid (maxWidth: 200, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          name
+          title
+          description
+        }
       }
     }
   }

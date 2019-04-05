@@ -110,7 +110,7 @@ PharmaciesPage.propTypes = {
 export default PharmaciesPage
 
 export const pharmaciesPageQuery = graphql`
-  query PharmaciesPage($id: String!) {
+  query PharmaciesPageTemplate($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {

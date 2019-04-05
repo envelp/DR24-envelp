@@ -140,7 +140,7 @@ WorksPage.propTypes = {
 export default WorksPage
 
 export const worksPageQuery = graphql`
-  query WorksPage($id: String!) {
+  query WorksPageTemplate($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {

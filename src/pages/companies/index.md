@@ -9,7 +9,3 @@ blurbs:
     image: /img/para-empresas.png
     title: para las empresas
 ---
-<<<<<<< HEAD
-=======
-
->>>>>>> dd8b6b261deb25701bf9830f248d33a403d287a5
