@@ -1,9 +1,12 @@
 ---
+templateKey: 'individuals-page'
 title: Doctores especialistas a un click de distancia
 information: >-
   Busca los mejores especialistas o servicios médicos, elige un horario adecuado
   y reserve al instante con unos pocos clics
-imageBanner: /img/doctors.png
+imageBanner:
+  alt: 'Doctors'
+  image: /img/doctors.png
 secondImage: /img/blog-index.jpg
 titleSecondSection: Médico sin salir de casa
 specialists:

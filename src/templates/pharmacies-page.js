@@ -10,10 +10,10 @@ export const PharmaciesPageTemplate = ({
   title,
   information,
   imageBanner,
-  imageSecond,
+  secondImage,
   titleSecondSection,
   description,
-  // pharmacies
+  pharmacies
 }) => {
   return (
     <div className="container">
@@ -35,7 +35,7 @@ export const PharmaciesPageTemplate = ({
       <section className="info">
         <div className="row info-section">
           <div className="col-sm-6 col-xs-12 info-image">
-            <PreviewCompatibleImage imageInfo={imageSecond} />
+            <PreviewCompatibleImage imageInfo={secondImage} />
           </div>
           <div className="col-sm-6 col-xs-12">
             <div className="info-container">
@@ -80,12 +80,6 @@ export const PharmaciesPageTemplate = ({
   )
 }
 
-PharmaciesPageTemplate.propTypes = {
-  title: PropTypes.string.isRequired,
-  content: PropTypes.string,
-  contentComponent: PropTypes.func,
-}
-
 const PharmaciesPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
 
@@ -95,7 +89,7 @@ const PharmaciesPage = ({ data }) => {
         title={frontmatter.title}
         information={frontmatter.information}
         imageBanner={frontmatter.imageBanner}
-        imageSecond={frontmatter.imageSecond}
+        secondImage={frontmatter.secondImage}
         titleSecondSection={frontmatter.titleSecondSection}
         description={frontmatter.description}
         pharmacies={frontmatter.pharmacies}
@@ -116,7 +110,7 @@ export default PharmaciesPage
 
 export const pharmaciesPageQuery = graphql`
   query PharmaciesPageTemplate {
-    markdownRemark(frontmatter: { templateKey: {eq: "companies-page"}}) {
+    markdownRemark(frontmatter: { templateKey: {eq: "pharmacies-page"}}) {
       frontmatter {
         title
         information
@@ -130,7 +124,7 @@ export const pharmaciesPageQuery = graphql`
             }
           }
         }
-        imageSecond {
+        secondImage {
           childImageSharp {
             fluid(maxWidth: 400, quality: 100) {
               ...GatsbyImageSharpFluid
@@ -139,6 +133,15 @@ export const pharmaciesPageQuery = graphql`
         }
         titleSecondSection
         description
+        pharmacies {
+          image {
+            childImageSharp {
+              fluid(maxWidth: 400, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
       }
     }
   }

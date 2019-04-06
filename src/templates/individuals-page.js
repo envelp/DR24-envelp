@@ -2,13 +2,20 @@ import React from "react"
 import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
-import Content, { HTMLContent } from '../components/Content'
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 import '../css/base.css';
 import '../css/individuals.css';
 
-export const IndividualsPageTemplate = ({ title, content, contentComponent }) => {
-  const PageContent = contentComponent || Content
+export const IndividualsPageTemplate = ({
+  title,
+  information,
+  imageBanner,
+  secondImage,
+  titleSecondSection,
+  description,
+  specialists
+}) => {
 
   return (
     <div className="container">
@@ -16,17 +23,14 @@ export const IndividualsPageTemplate = ({ title, content, contentComponent }) =>
         <div className='row'>
           <div className='col-sm-6 col-xs-12'>
             <div className="container-info">
-              <h1>Doctores especialistas a un click de distancia</h1>
-              <p>
-                Busca los mejores especialistas o servicios médicos, elige un horario adecuado y
-                reserve al instante con unos pocos clics
-            </p>
+              <h1>{title}</h1>
+              <p>{information}</p>
               <a style={{ width: '203px' }} className='btn-background margin-top' href="/">Busca médicos <span className="btn-icon-background"></span></a>
             </div>
           </div>
           <div className='col-sm-6 col-xs-12 individuals-banner-image'>
             <div className="individuals-doctors">
-              {/* <img src={doctors} alt="Doctors" /> */}
+              <PreviewCompatibleImage imageInfo={imageBanner} />
             </div>
           </div>
         </div>
@@ -34,16 +38,12 @@ export const IndividualsPageTemplate = ({ title, content, contentComponent }) =>
       <section className="info">
         <div className="row info-section">
           <div className="col-sm-6 col-xs-12 info-image">
-            {/* <img src={display} alt="display" /> */}
+            <PreviewCompatibleImage imageInfo={secondImage} />
           </div>
           <div className="col-sm-6 col-xs-12">
             <div className="info-container">
-              <h2>Médico sin salir de casa</h2>
-              <p>
-                No siempre es fácil llevar a un niño o una persona mayor a un centro de salud.
-                Gracias a las consultas a domicilio puedes esperar comodamente desde tu casa y recibir una evaluación,
-                diagnostico o tratamiento que requieran un examen físico.
-            </p>
+              <h2>{titleSecondSection}</h2>
+              <p>{description}</p>
             </div>
           </div>
         </div>
@@ -114,38 +114,60 @@ export const IndividualsPageTemplate = ({ title, content, contentComponent }) =>
   )
 }
 
-IndividualsPageTemplate.propTypes = {
-  title: PropTypes.string.isRequired,
-  content: PropTypes.string,
-  contentComponent: PropTypes.func,
-}
-
 const IndividualsPage = ({ data }) => {
-  const { markdownRemark: post } = data
+  const { frontmatter } = data.markdownRemark
 
   return (
     <Layout>
       <IndividualsPageTemplate
-        contentComponent={HTMLContent}
-        title={post.frontmatter.title}
-        content={post.html}
+        title={frontmatter.title}
+        information={frontmatter.information}
+        imageBanner={frontmatter.imageBanner}
+        secondImage={frontmatter.secondImage}
+        titleSecondSection={frontmatter.titleSecondSection}
+        description={frontmatter.description}
+        specialists={frontmatter.specialists}
       />
     </Layout>
   )
 }
 
-IndividualsPage.propTypes = {
-  data: PropTypes.object.isRequired,
-}
-
 export default IndividualsPage
 
 export const individualsPageQuery = graphql`
-  query IndividualsPageTemplate($id: String!) {
-    markdownRemark(id: { eq: $id }) {
-      html
+  query IndividualsPageTemplate {
+    markdownRemark(frontmatter: { templateKey: {eq: "individuals-page"}}) {
       frontmatter {
         title
+        information
+        imageBanner {
+          alt
+          image {
+            childImageSharp {
+              fluid(maxWidth: 800, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
+        secondImage {
+          childImageSharp {
+            fluid(maxWidth: 400, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        titleSecondSection
+        description
+        specialists {
+          image {
+            childImageSharp {
+              fluid(maxWidth: 400, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+        }
       }
     }
   }

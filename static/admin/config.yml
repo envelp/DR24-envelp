@@ -84,17 +84,20 @@ collections:
         label: "For Individuals"
         name: "Individuals"
         fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "individuals-page"}
           - {label: Title, name: title, widget: string}
           - {label: Information, name: information, widget: string}
-          - {label: "Image banner", name: "imageBanner", widget: image}
+          - {label: "Image Banner", name: "imageBanner", widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}
           - {label: "Image second section", name: "secondImage", widget: image}
           - {label: "Title second section", name: "titleSecondSection", widget: string}
+          - {label: Description, name: description, widget: string}
           - {label: Specialists, name: specialists, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Name, name: name, widget: text}, {label: Title, name: title, widget: string}, {label: Description, name: description, widget: string}]}
       - file: "src/pages/works/index.md"
         label: "How it works"
         name: "How it works"
         fields:
+          - {label: "Template Key", name: "templateKey", widget: "hidden", default: "works-page"}
           - {label: Title, name: title, widget: string}
           - {label: Information, name: information, widget: string}
-          - {label: "Image banner", name: "imageBanner", widget: image}
+          - {label: "Image Banner", name: "imageBanner", widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}
           - {label: Questions, name: questions, widget: list, fields: [{label: Question, name: question, widget: string}, {label: Answer, name: answer, widget: text}]}
