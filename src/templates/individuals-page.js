@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
+import Specialists from '../components/Specialists'
 
 import '../css/base.css';
 import '../css/individuals.css';
@@ -50,50 +51,7 @@ export const IndividualsPageTemplate = ({
       </section>
       <section className="specialists">
         <h2 className="specialists-title">Especialistas certificados que aman lo que hacen</h2>
-        <div className="row">
-          <div className="col-sm-4">
-            <div className="specialists-item">
-              <div className="specialists-image">
-                {/* <Companies /> */}
-              </div>
-              <div className="specialists-info">
-                <h2>Andres Bustamante</h2>
-                <h3>Director General de XXX</h3>
-                <p>
-                  "Deseo brindar a cada uno de mis pacientesla atención y el tiempo que merecen."
-              </p>
-              </div>
-            </div>
-          </div>
-          <div className="col-sm-4">
-            <div className="specialists-item">
-              <div className="specialists-image">
-                {/* <Pharmacies /> */}
-              </div>
-              <div className="specialists-info">
-                <h2>Dra. María Salazar</h2>
-                <h3>Médico General</h3>
-                <p>
-                  "Deseo brindar a cada uno de mis pacientesla atención y el tiempo que merecen."
-              </p>
-              </div>
-            </div>
-          </div>
-          <div className="col-sm-4">
-            <div className="specialists-item">
-              <div className="specialists-image">
-                {/* <Pharmacies /> */}
-              </div>
-              <div className="specialists-info">
-                <h2>Dra. Ricardo Garza</h2>
-                <h3>Médico General</h3>
-                <p>
-                  "Deseo brindar a cada uno de mis pacientesla atención y el tiempo que merecen."
-              </p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <Specialists gridItems={specialists} />
       </section>
       <section className="contact">
         <div className="row">
@@ -167,6 +125,9 @@ export const individualsPageQuery = graphql`
               }
             }
           }
+          name
+          title
+          description
         }
       }
     }
