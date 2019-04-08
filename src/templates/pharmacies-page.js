@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
+import Pharmacies from '../components/Pharmacies'
 
 import '../css/pharmacies.css';
 
@@ -47,20 +48,7 @@ export const PharmaciesPageTemplate = ({
       </section>
       <section className="clients">
         <h2 className="clients-title">Farmacias que ya trabajan con nosotros</h2>
-        <div className="row">
-          <div className="col-sm-3">
-            {/* <Companies /> */}
-          </div>
-          <div className="col-sm-3">
-            {/* <Companies /> */}
-          </div>
-          <div className="col-sm-3">
-            {/* <Companies /> */}
-          </div>
-          <div className="col-sm-3">
-            {/* <Companies /> */}
-          </div>
-        </div>
+        <Pharmacies gridItems={pharmacies} />
       </section>
       <section className="contact">
         <div className="row">
