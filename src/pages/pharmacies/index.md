@@ -1,5 +1,5 @@
 ---
-templateKey: 'pharmacies-page'
+templateKey: pharmacies-page
 title: Para farmacias
 information: >-
   Somos el primer servicio de tele-medicina en el país ofreciendo el mejor
@@ -7,7 +7,7 @@ information: >-
   país ofreciendo el mejor servicio. Agenda una cita ya!Somos el primer servicio
   de tele-medicina en el país ofreciendo el mejor servicio. Agenda una cita ya!
 imageBanner:
-  alt: 'Doctors'
+  alt: Doctors
   image: /img/doctors.png
 secondImage: /img/jumbotron.jpg
 titleSecondSection: Médico sin salir de casa
@@ -20,5 +20,6 @@ pharmacies:
   - image: /img/blog-index.jpg
   - image: /img/products-grid1.jpg
   - image: /img/products-grid2.jpg
+  - image: /img/flavor_wheel.jpg
 ---
 
