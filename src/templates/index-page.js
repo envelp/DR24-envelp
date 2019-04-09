@@ -1,8 +1,8 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import { graphql } from 'gatsby'
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 import Layout from '../components/Layout'
+import Services from '../components/Services'
 import '../css/base.css';
 import '../css/home.css';
 
@@ -47,50 +47,18 @@ export const IndexPageTemplate = ({
         </div>
       </section>
       <section className="services">
-        <div className="row">
-          <div className="col-sm-6">
-            <div className="service-item">
-              <div className="service-image">
-                {/* <img src={companies} alt="companies" /> */}
-              </div>
-              <div className="service-info">
-                <h2>Para empresas</h2>
-                <p>
-                  Somos el primer servicio de tele-medicina en el país ofreciendo el mejor servicio.
-                  Agenda tu cita ya!
-              </p>
-                {/* <a className="btn btn-small" href="/"> Ver más <span className="btn-icon"><FontAwesomeIcon icon="arrow-right" /></span></a> */}
-                <a className="btn btn-small" href="/"> Ver más <span className="btn-icon"></span></a>
-              </div>
-            </div>
-          </div>
-          <div className="col-sm-6">
-            <div className="service-item">
-              <div className="service-image">
-                {/* <img src={pharmacies} alt="Pharmacies" /> */}
-              </div>
-              <div className="service-info">
-                <h2>Para farmacias</h2>
-                <p>
-                  Somos el primer servicio de tele-medicina en el país ofreciendo el mejor servicio.
-                  Agenda tu cita ya!
-              </p>
-                {/* <a className="btn btn-small" href="/"> Ver más <span className="btn-icon"><FontAwesomeIcon icon="arrow-right" /></span></a> */}
-                <a className="btn btn-small" href="/"> Ver más <span className="btn-icon"></span></a>
-              </div>
-            </div>
-          </div>
-        </div>
+        {/* <Services gridItems={services} /> */}
       </section>
-      <section className="contact-phone">
+      <section className="contact">
         <div className="row">
           <div className="col-xs-12">
-            <h2 style={{ marginTop: '-135px' }}>¡Nosotros te llamamos!</h2>
-            <p>Déjanos tu número y te llamaremos cuanto antes</p>
-            <form className="form-phone">
-              <input type="phone" placeholder="Tu número telefónico" />
-              {/* <button>Llámenme <span className="btn-icon-button"><FontAwesomeIcon icon="arrow-right" /></span></button> */}
-              <button>Llámenme <span className="btn-icon-button"></span></button>
+            <h2>¡Contáctanos!</h2>
+            <p style={{ marginTop: '-25px' }}>Déjanos tus datos para ponernos en contacto</p>
+            <form className="form">
+              <input type="text" placeholder="Nombre" />
+              <input type="phone" placeholder="Teléfono" />
+              <input type="email" placeholder="Correo electrónico" />
+              {/* <button><span className="btn-icon-button"><FontAwesomeIcon icon="arrow-right" /></span></button> */}
             </form>
           </div>
         </div>
@@ -117,13 +85,6 @@ const IndexPage = ({ data }) => {
   )
 }
 
-IndexPage.propTypes = {
-  data: PropTypes.shape({
-    markdownRemark: PropTypes.shape({
-      frontmatter: PropTypes.object,
-    }),
-  }),
-}
 
 export default IndexPage
 

@@ -12,21 +12,5 @@ titleSecondSection: 'Conoce cómo funciona nuestro servicio de tele-medicina '
 description: >-
   Somos el primer servicio de tele-medicina en el país ofreciendo el mejor
   servicio. Agenda una cita ya!
-services:
-  - image: /img/para-empresas.png
-    title: Para empresas
-    description: >-
-      Somos el primer servicio de tele-medicina en el país ofreciendo el mejor
-      servicio.  Agenda una cita ya!
-  - image: /img/para-farmacias.png
-    title: Para farmacias
-    description: >-
-      Somos el primer servicio de tele-medicina en el país ofreciendo el mejor
-      servicio.  Agenda una cita ya!
-  - image: /img/para-empresas.png
-    title: Para individuos
-    description: >-
-      Somos el primer servicio de tele-medicina en el país ofreciendo el mejor
-      servicio.  Agenda una cita ya!
 ---
 
