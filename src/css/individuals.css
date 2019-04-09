@@ -3,16 +3,16 @@
 }
 
 .individuals-doctors {
-  background: #fbfcfb ;
-  border-radius: 100%;
+  /* background: #fbfcfb ;
+  border-radius: 100%; */
   position: relative;
 }
 
 .individuals-doctors img {
   display: block;
   margin: auto;
-  border-radius: 50%;
-  border: 30px solid #fff;
+  /* border-radius: 50%; */
+  /* border: 30px solid #fff; */
   margin-top: 146px;
 }
 
@@ -56,6 +56,9 @@
   box-shadow: 0 0 25px 0 rgba(112, 112, 112, 0.14);
   font-size: 20px;
   padding: 24px 37px;
+  position: relative;
+  z-index: 10;
+  margin-top: -70px;
 }
 
 .specialists-info p {
@@ -173,8 +176,8 @@
 
   .individuals-doctors {
     position: absolute;
-    background:#f8f7f8 ;
-    top: 0;
+    /* background:#f8f7f8 ; */
+    top: -85px;
     width: 876px;
     height: 876px;
     /* z-index: -1; */
@@ -182,8 +185,8 @@
 
   .info-image img {
     display: block;
-    margin-left: -155px;
-    margin-top: -115px;
+    margin-left: 0px !important;
+    margin-top: -40px !important;
   }
 
   .specialists-info {

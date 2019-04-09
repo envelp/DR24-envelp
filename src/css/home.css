@@ -119,7 +119,7 @@
   .home-doctors {
     position: absolute;
     background:#f8f7f8 ;
-    top: 0;
+    top: -85px;
     width: 876px;
     height: 876px;
     /* z-index: -1; */

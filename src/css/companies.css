@@ -174,7 +174,7 @@
   .companies-doctors {
     position: absolute;
     background:#f8f7f8 ;
-    top: 0;
+    top: -85px;
     width: 876px;
     height: 876px;
     /* z-index: -1; */
@@ -190,6 +190,9 @@
     width: 337px;
     min-height: 201px;
     float: right;
+    margin-top: -70px;
+    position: relative;
+    z-index: 10;
   }
   .form {
     padding: 0;

@@ -3,8 +3,8 @@ import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 const SpecialistsGrid = ({ gridItems }) => (
   <div className="row">
-    {gridItems.map(item => (
-      <div key={item.title} className="col-sm-4">
+    {gridItems.map((item, index) => (
+      <div key={index} className="col-sm-4">
         <div className="specialists-item">
           <div className="specialists-image">
             <PreviewCompatibleImage imageInfo={item} />

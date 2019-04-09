@@ -109,7 +109,7 @@ export const individualsPageQuery = graphql`
         }
         secondImage {
           childImageSharp {
-            fluid(maxWidth: 400, quality: 100) {
+            fluid(maxWidth: 1000, quality: 100) {
               ...GatsbyImageSharpFluid
             }
           }
