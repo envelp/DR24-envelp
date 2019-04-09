@@ -14,7 +14,19 @@ description: >-
   servicio. Agenda una cita ya!
 clients:
   - image: /img/para-empresas.png
-    title: Para las empresas
-    description: hola
+    title: Para empresas
+    description: >-
+      Somos el primer servicio de tele-medicina en el país ofreciendo el mejor
+      servicio.  Agenda una cita ya!
+  - image: /img/para-farmacias.png
+    title: Para farmacias
+    description: >-
+      Somos el primer servicio de tele-medicina en el país ofreciendo el mejor
+      servicio.  Agenda una cita ya!
+  - image: /img/para-empresas.png
+    title: Para individuos
+    description: >-
+      Somos el primer servicio de tele-medicina en el país ofreciendo el mejor
+      servicio.  Agenda una cita ya!
 ---
 
