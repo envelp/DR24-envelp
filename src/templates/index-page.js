@@ -28,7 +28,7 @@ export const IndexPageTemplate = ({
           </div>
           <div className='col-sm-6 col-xs-12 home-banner-image'>
             <div className="home-doctors">
-              {/* <PreviewCompatibleImage imageInfo={imageBanner} /> */}
+              <PreviewCompatibleImage imageInfo={imageBanner} />
             </div>
           </div>
         </div>
@@ -36,7 +36,7 @@ export const IndexPageTemplate = ({
       <section className="works">
         <div className="row works-section">
           <div className="col-sm-6 col-xs-12 works-image">
-            {/* <PreviewCompatibleImage imageInfo={imageSecond} /> */}
+            <PreviewCompatibleImage imageInfo={imageSecond} />
           </div>
           <div className="col-sm-6 col-xs-12">
             <h2>{titleSecondSection}</h2>
