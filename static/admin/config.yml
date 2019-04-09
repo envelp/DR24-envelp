@@ -28,7 +28,7 @@ collections:
         fields:
           - {label: "Template Key", name: "templateKey", widget: "hidden", default: "index-page"}
           - {label: Title, name: title, widget: string}
-          - {label: Image Banner, name: imageBanner, widget: image}
+          - {label: "Image Banner", name: "imageBanner", widget: object, fields: [{label: Image, name: image, widget: image}, {label: Alt, name: alt, widget: string}]}
           - {label: Information, name: information, widget: string}
           - {label: "Image second section", name: "imageSecond", widget: image}
           - {label: "Title second section", name: "titleSecondSection", widget: string}
