@@ -12,7 +12,7 @@ titleSecondSection: 'Conoce cómo funciona nuestro servicio de tele-medicina '
 description: >-
   Somos el primer servicio de tele-medicina en el país ofreciendo el mejor
   servicio. Agenda una cita ya!
-ser:
+clients:
   - image: /img/para-empresas.png
     title: Para las empresas
     description: hola

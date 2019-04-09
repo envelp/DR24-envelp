@@ -33,7 +33,7 @@ collections:
           - {label: "Image second section", name: "imageSecond", widget: image}
           - {label: "Title second section", name: "titleSecondSection", widget: string}
           - {label: Description, name: description, widget: string}
-          - {label: Services, name: ser, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Title, name: title, widget: text}, {label: Description, name: description, widget: string}]}
+          - {label: Clients, name: clients, widget: list, fields: [{label: Image, name: image, widget: image}, {label: Title, name: title, widget: text}, {label: Description, name: description, widget: string}]}
       - file: "src/pages/about/index.md"
         label: "About"
         name: "about"

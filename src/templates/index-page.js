@@ -13,7 +13,7 @@ export const IndexPageTemplate = ({
   imageSecond,
   titleSecondSection,
   description,
-  services
+  clients
 }) => (
     <div className="container">
       <section className='home-banner'>
@@ -47,7 +47,7 @@ export const IndexPageTemplate = ({
         </div>
       </section>
       <section className="services">
-        {/* <Services gridItems={services} /> */}
+        <Services gridItems={clients} />
       </section>
       <section className="contact">
         <div className="row">
@@ -79,7 +79,7 @@ const IndexPage = ({ data }) => {
         imageSecond={frontmatter.imageSecond}
         titleSecondSection={frontmatter.titleSecondSection}
         description={frontmatter.description}
-        services={frontmatter.services}
+        clients={frontmatter.clients}
       />
     </Layout>
   )
@@ -113,6 +113,17 @@ export const pageQuery = graphql`
         }
         titleSecondSection
         description
+        clients {
+          image {
+            childImageSharp {
+              fluid(maxWidth: 400, quality: 100) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
+          title
+          description
+        }
       }
     }
   }
